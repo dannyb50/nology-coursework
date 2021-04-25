@@ -60,14 +60,31 @@ main {
     border: solid black 2px;
     height: 25%;
     padding: 15px;
+    display: flex;
 }
 
-ul {
-    margin-left: 50px;
+.box {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 10px
 }
 
-li {
-    margin: 15px 0;
+#top-panel {
+    justify-content: space-around;
+    align-items: center;
+}
+
+#middle-panel {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#bottom-panel {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #right-content {
