@@ -1,0 +1,99 @@
+.navigation {
+    height: 10vh;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo {
+    font-family: $font-display;
+    color: $color-white;
+    font-size: 20px;
+}
+
+.button {
+    display: block;
+    width: 100px;
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: $color-white;
+    border: none;
+
+    &--form {
+        width: 100%;
+        background-color: $color-primary-light;
+    }
+
+    &--secondary {
+        background-color: unset;
+        color: $color-primary;
+        border: 2px solid $color-primary-light;
+    }
+}
+
+.intro {
+    text-align: center;
+
+    &__heading {
+        color: $color-primary;
+        font-size: 50px;
+    }
+
+    &__sub-heading {
+        font-family: $font-display;
+        font-size: 25px;
+        margin: 20px 0;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-tertiary-light;
+    padding: 20px;
+    border: 2px solid $color-black;
+    border-radius: 10px;
+
+    &__input {
+        margin-bottom: 20px;
+    }
+    
+}
+.wave {
+    vertical-align: top;
+}
+
+.outro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        font-family: $font-display;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+.footer {
+    height: 10vh;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    
+    &__text {
+        color: $color-white;
+    }
+}

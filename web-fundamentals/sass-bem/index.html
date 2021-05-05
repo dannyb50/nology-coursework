@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass and BEM</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="#" class="logo">My Site</a>
+      <a href="#" class="button">login</a>
+    </nav>
+    <header class="header">
+      <div class="intro">
+        <h1 class="intro__heading">Hello</h1>
+        <h2 class="intro__sub-heading">Welcome to my website</h2>
+        <a href="#" class="intro__button button">scroll</a>
+      </div>
+    </header>
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#c0bfc0"
+        fill-opacity="1"
+        d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,170.7C672,160,768,96,864,64C960,32,1056,32,1152,58.7C1248,85,1344,139,1392,165.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+
+    <main class="main">
+      <section class="contact">
+      <form action="" class="form">
+        <label for="name" class="form__label">Name</label>
+        <input class="form__input" type="text" name="name" />
+        <label for="email" class="form__label">Email</label>
+        <input class="form__input" type="email" />
+        <button class="button button--form">Send</button>
+      </form>
+      </section>
+    
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#c0bfc0"
+        fill-opacity="1"
+        d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,170.7C672,160,768,96,864,64C960,32,1056,32,1152,58.7C1248,85,1344,139,1392,165.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg>
+
+    <section class="outro-container">
+      <div class="outro">
+        <h2 class="outro__heading">Thanks for visiting</h2>
+        <button class="button button--secondary">Log out</button>
+      </div>
+    </section>
+
+</main>
+    <footer class="footer">
+      <a href="#" class="logo">My Site</a>
+      <p class="footer__text">copy right</p>
+      <p class="footer__text">2021</p>
+    </footer>
+  </body>
+</html>

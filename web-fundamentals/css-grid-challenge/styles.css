@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-areas: "header header header header header header" "menu main main main right right" "menu footer footer footer footer footer";
+  gap: 10px;
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+.container > * {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.container .header {
+  background-color: palegreen;
+  grid-area: header;
+}
+.container .nav {
+  background-color: orange;
+  grid-area: menu;
+}
+.container .main {
+  background-color: paleturquoise;
+  grid-area: main;
+}
+.container .footer {
+  background-color: palevioletred;
+  grid-area: footer;
+}
+.container .right {
+  background-color: papayawhip;
+  grid-area: right;
+}
