@@ -9,3 +9,26 @@ $color-white: #fafafa;
     font-family: $font-body;
     color: $color-white;
 }
+
+
+.header {
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #51769E 100%),
+linear-gradient(180deg, #260184 99.99%, rgba(196, 196, 196, 0) 100%);
+}
+
+.projects {
+    height: 100vh;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #260184 94.79%),
+    linear-gradient(180deg, #51769E 99.99%, rgba(255, 255, 255, 0.85) 100%);
+    
+}
+
+.info {
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #51769E 100%),
+linear-gradient(180deg, #260184 99.99%, #FFFFFF 100%);
+
+
+}

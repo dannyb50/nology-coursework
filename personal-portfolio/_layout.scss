@@ -1,0 +1,38 @@
+.header {
+    height: 100vh;
+
+    &__nav {
+    height: 10vh;
+    }
+
+    &__welcome {
+        height: 60vh;
+    }
+
+    &__svg {
+        height: 30vh;
+    }
+
+}
+
+.projects {
+    height: 100vh;
+}
+
+.info {
+    height: 100vh;
+
+    &__about {
+        height: 35vh;
+    }
+
+    &__contact {
+        height: 35vh;
+    }
+
+    &__svg {
+        height: 30vh;
+    }
+
+}
+

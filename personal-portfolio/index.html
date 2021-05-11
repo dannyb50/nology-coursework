@@ -1,30 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Danny Baker</title>
-    <link rel="stylesheet" href="main.scss"/>
-</head>
-<body>
-    <header>
-    <nav>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
         <a href="#">Projects</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-    </nav>
-    <h1>
-        Hello, I'm Danny
-    </h1>
-    <h2>
-        A Junior Web Developer
-    </h2>
-    <a href="#">View My Work</a>
+      </nav>
+      <section class="header__welcome">
+        <h1>Hello, I'm Danny</h1>
+        <h2>A Junior Web Developer</h2>
+        <a href="#">View My Work</a>
+      </section>
+      <svg
+        class="header__svg"
+        width="100%"
+        height="35%"
+        preserveAspectRatio="none"
+        viewBox="0 0 375 221"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g style="mix-blend-mode: overlay">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 85.0288H26C71 93.187 63 63.7661 94 41.3041C125 18.8421 156 41.3041 188 63.7661C219 83.4203 242 101.346 273 121C300 132 317 125.537 334 132L375 143V221H359C344 221 313 221 281 221C250 221 219 221 188 221C156 221 125 221 94 221C63 221 31 221 16 221H0V85.0288Z"
+            fill="url(#paint0_linear)"
+          />
+        </g>
+        <g style="mix-blend-mode: overlay">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 0H16C31 0 63 0 94 4.33333C125 8.66667 156 17.3333 188 28.1667C219 41.1667 250 58.5 281 58.5C313 58.5 344 41.1667 359 32.5L375 26V221H359C344 221 313 221 281 221C250 221 219 221 188 221C156 221 125 221 94 221C63 221 31 221 16 221H0V0Z"
+            fill="url(#paint1_linear)"
+          />
+        </g>
+        <g style="mix-blend-mode: overlay">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 122.189L32 141.189C50 152.189 67 164.189 94 159.027C131 159.027 146 136.635 188 111.369C219 92.7206 248.911 72 281 72C314 72 344 96.8648 359 111.369L375 127.946V221.189H359C344 221.189 313 221.189 281 221.189C250 221.189 219 221.189 188 221.189C156 221.189 125 221.189 94 221.189C63 221.189 31 221.189 16 221.189H0V122.189Z"
+            fill="url(#paint2_linear)"
+          />
+        </g>
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="187.5"
+            y1="32"
+            x2="187.5"
+            y2="221"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="white" stop-opacity="0.28" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear"
+            x1="187.5"
+            y1="0"
+            x2="187.5"
+            y2="221"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="white" stop-opacity="0.51" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint2_linear"
+            x1="187.5"
+            y1="71.1886"
+            x2="187.5"
+            y2="221.189"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="white" stop-opacity="0.62" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
     </header>
     <main>
+      <section class="projects">
+        <h1>My Projects</h1>
+      </section>
+      <section class="info">
+        <section class="info__about">
+          <h1>About Danny</h1>
+          <p>
+            Hello, I’m Danny. I’m a Warrington-based junior software developer.
+          </p>
+          <p>
+            I am currently studying on a self-paced software developer course
+            with _nology. I am loving the journey and working towards my goal of
+            landing my first job in tech in 2021.
+          </p>
+        </section>
+        <section class="info__contact">
+          <h1>Get in Touch</h1>
+          <p>
+            If you’re like-minded and think we can help each other, I’d love to
+            hear from you.
+          </p>
+        </section>
 
-    </main>
+      
+
+        <svg
+          class="info__svg"
+          width="100%"
+          height="35%"
+          preserveAspectRatio="none"
+          viewBox="0 0 375 168"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g style="mix-blend-mode: overlay">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 134L16 128C31 123 63 112 94 112C125 112 156 123 188 127C219 130 250 127 281 130C313 134 344 145 359 151L375 157V168H359C344 168 313 168 281 168C250 168 219 168 188 168C156 168 125 168 94 168C63 168 31 168 16 168H0V134Z"
+              fill="url(#paint0_linear)"
+            />
+          </g>
+          <g style="mix-blend-mode: overlay">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 56L16 49.4118C31 44.4706 63 31.2941 94 47.7647C125 62.5882 156 105.412 188 105.412C219 105.412 250 62.5882 281 37.8824C313 13.1765 344 6.58824 359 3.29412L375 0V168H359C344 168 313 168 281 168C250 168 219 168 188 168C156 168 125 168 94 168C63 168 31 168 16 168H0V56Z"
+              fill="url(#paint1_linear)"
+            />
+          </g>
+          <g style="mix-blend-mode: overlay">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 123.196L16 119.196C31 115.196 63 108.196 94 98.1962C125 89.1962 156 78.1962 188 72.1962C219 66.1962 250 66.1962 281 68.1962C313 70.1962 344 74.1962 359 76.1962L375 78.1962V168.196H359C344 168.196 313 168.196 281 168.196C250 168.196 219 168.196 188 168.196C156 168.196 125 168.196 94 168.196C63 168.196 31 168.196 16 168.196H0V123.196Z"
+              fill="url(#paint2_linear)"
+            />
+          </g>
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="187.5"
+              y1="112"
+              x2="187.5"
+              y2="168"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="white" stop-opacity="0.69" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear"
+              x1="187.5"
+              y1="0"
+              x2="187.5"
+              y2="168"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="white" stop-opacity="0.65" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint2_linear"
+              x1="187.5"
+              y1="67"
+              x2="187.5"
+              y2="168.196"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="white" stop-opacity="0.54" />
+              <stop offset="0.598958" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+          </defs>
     
-</body>
+        </svg>
+        
+      </section>
+    </main>
+  </body>
 </html>
