@@ -5,20 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Danny Baker</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://kit.fontawesome.com/88eeb26109.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
+      <div class="header__stars">
+      <i class="fas fa-star header__star-one"></i>
+      <i class="fas fa-star header__star-two"></i>
+      <i class="fas fa-star header__star-three"></i>
+      </div>
       <nav class="header__nav">
-        <a href="#">Projects</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a class="header__nav__link" href="#projects">Projects</a>
+        <a class="header__nav__link" href="#about">About</a>
+        <a class="header__nav__link" href="#contact">Contact</a>
       </nav>
       <section class="header__welcome">
         <h1>Hello, I'm Danny</h1>
         <h2>A Junior Web Developer</h2>
-        <a href="#">View My Work</a>
       </section>
+      <a class="header__link" href="#projects">View My Work</a>
       <svg
         class="header__svg"
         width="100%"
@@ -90,11 +96,11 @@
       </svg>
     </header>
     <main>
-      <section class="projects">
+      <section class="projects" id="projects">
         <h1>My Projects</h1>
       </section>
       <section class="info">
-        <section class="info__about">
+        <section class="info__about" id="about">
           <h1>About Danny</h1>
           <p>
             Hello, I’m Danny. I’m a Warrington-based junior software developer.
@@ -105,7 +111,7 @@
             landing my first job in tech in 2021.
           </p>
         </section>
-        <section class="info__contact">
+        <section class="info__contact" id="contact">
           <h1>Get in Touch</h1>
           <p>
             If you’re like-minded and think we can help each other, I’d love to

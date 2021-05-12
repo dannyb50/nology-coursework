@@ -20,14 +20,103 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #51769E 100%), linear-gradient(180deg, #260184 99.99%, #FFFFFF 100%);
 }
 
+.header__star-one {
+  position: absolute;
+  font-size: 9px;
+  left: 17px;
+  top: 23px;
+  animation-iteration-count: infinite;
+  animation-name: twinkle;
+  animation-duration: 2s;
+}
+.header__star-two {
+  position: absolute;
+  font-size: 8px;
+  left: 34px;
+  top: 28px;
+  animation-iteration-count: infinite;
+  animation-name: twinkle;
+  animation-duration: 1.9s;
+}
+.header__star-three {
+  position: absolute;
+  font-size: 6px;
+  left: 26px;
+  top: 42px;
+  animation-iteration-count: infinite;
+  animation-name: twinkle;
+  animation-duration: 2.1s;
+}
+
+@media screen and (min-width: 768px) {
+  .header__star-one {
+    font-size: 16px;
+    left: 17px;
+    top: 23px;
+  }
+
+  .header__star-two {
+    font-size: 13px;
+    left: 54px;
+    top: 35px;
+  }
+
+  .header__star-three {
+    font-size: 10px;
+    left: 33px;
+    top: 63px;
+  }
+}
+@keyframes twinkle {
+  20% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
 .header {
   height: 100vh;
 }
 .header__nav {
   height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header__nav__link {
+  padding-right: 5%;
+  text-decoration: none;
+  font-size: 12px;
+}
+.header__nav__link:hover {
+  color: #F6cc55;
+  transition: 0.3s ease-in;
+  transform: rotate(10deg);
+}
+.header__nav__link:active {
+  color: #b0708a;
 }
 .header__welcome {
   height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__link {
+  position: absolute;
+  bottom: 50%;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+.header__link:hover {
+  color: #F6cc55;
+  transition: 0.3s ease-in;
+  transform: rotate(10deg);
+}
+.header__link:active {
+  color: #b0708a;
 }
 .header__svg {
   height: 30vh;
@@ -48,4 +137,10 @@
 }
 .info__svg {
   height: 30vh;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav__link {
+    font-size: 18px;
+  }
 }

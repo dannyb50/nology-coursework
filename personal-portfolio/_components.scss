@@ -1,0 +1,59 @@
+.header {
+    
+    &__star-one {
+        position: absolute;
+        font-size: 9px;
+        left: 17px;
+        top: 23px;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 2s;
+    }
+
+    &__star-two {
+        position: absolute;
+        font-size: 8px;
+        left: 34px;
+        top: 28px;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 1.9s;
+    }
+
+    &__star-three {
+        position: absolute;
+        font-size: 6px;
+        left: 26px;
+        top: 42px;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 2.1s;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header__star-one {
+        font-size: 16px;
+        left: 17px;
+        top: 23px;
+    }
+
+    .header__star-two {
+        font-size: 13px;
+        left: 54px;
+        top: 35px;
+    }
+
+    .header__star-three {
+        font-size: 10px;
+        left: 33px;
+        top: 63px;
+    }
+}
+
+@keyframes twinkle {
+    20% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+}
