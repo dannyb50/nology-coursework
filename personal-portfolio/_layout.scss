@@ -1,3 +1,8 @@
+h1 {
+    font-family: "Archivo Black";
+    font-size: 24px;
+}
+
 .header {
     height: 100vh;
 
@@ -30,15 +35,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+    }
+
+    &__welcome > h1 {
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+    &__welcome > h2 {
+        margin-bottom: 5%;
+        font-size: 18px;
     }
 
     &__link {
-        position: absolute;
-        bottom: 50%;
         text-decoration: none;
         font-size: 14px;
-        font-weight: bold;
+        font-family: "Archivo Black";
+        
     }
 
     &__link:hover {
@@ -60,18 +73,30 @@
 }
 
 .projects {
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+
+    &__header {
+        padding: 3%;
+    }
 }
 
 .info {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__about {
         height: 35vh;
+        text-align: center;
+        padding-top: 5%;
     }
 
     &__contact {
         height: 35vh;
+        text-align: center;
     }
 
     &__svg {
@@ -80,9 +105,29 @@
 
 }
 
+.info__about > p {
+    font-size: 14px;
+}
+
+.info__contact > p {
+    font-size: 14px;
+}
+
 @media screen and (min-width: 768px) {
     .header__nav__link {
         font-size: 18px;
+    }
+
+    .header__link {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .header__welcome > h2 {
+        font-size: 24px;
     }
 }
 

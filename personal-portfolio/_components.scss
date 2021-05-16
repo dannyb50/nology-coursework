@@ -31,6 +31,64 @@
     }
 }
 
+.projects {
+    
+    &__star-one {
+        position: absolute;
+        font-size: 14px;
+        right: 5%;
+        bottom: 12%;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 2.1s;
+    }
+
+    &__star-two {
+        position: absolute;
+        font-size: 8px;
+        right: 3%;
+        bottom: 6%;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 1.9s;
+    }
+}
+
+.container {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
+    border-top: 1px solid $color-white;
+
+    &__link-one {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &__link-two {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &__link-three {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &__link-four {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        border-bottom: 1px solid $color-white;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .header__star-one {
         font-size: 16px;
@@ -48,6 +106,14 @@
         font-size: 10px;
         left: 33px;
         top: 63px;
+    }
+
+    .projects__star-one {
+        font-size: 21px;
+    }
+
+    .projects__star-two {
+        font-size: 15px;
     }
 }
 

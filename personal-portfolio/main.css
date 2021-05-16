@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +49,56 @@
   animation-duration: 2.1s;
 }
 
+.projects__star-one {
+  position: absolute;
+  font-size: 14px;
+  right: 5%;
+  bottom: 12%;
+  animation-iteration-count: infinite;
+  animation-name: twinkle;
+  animation-duration: 2.1s;
+}
+.projects__star-two {
+  position: absolute;
+  font-size: 8px;
+  right: 3%;
+  bottom: 6%;
+  animation-iteration-count: infinite;
+  animation-name: twinkle;
+  animation-duration: 1.9s;
+}
+
+.container {
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 2%;
+  border-top: 1px solid #fafafa;
+}
+.container__link-one {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border-bottom: 1px solid #fafafa;
+}
+.container__link-two {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-bottom: 1px solid #fafafa;
+}
+.container__link-three {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-bottom: 1px solid #fafafa;
+}
+.container__link-four {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border-bottom: 1px solid #fafafa;
+}
+
 @media screen and (min-width: 768px) {
   .header__star-one {
     font-size: 16px;
@@ -66,6 +117,14 @@
     left: 33px;
     top: 63px;
   }
+
+  .projects__star-one {
+    font-size: 21px;
+  }
+
+  .projects__star-two {
+    font-size: 15px;
+  }
 }
 @keyframes twinkle {
   20% {
@@ -73,6 +132,11 @@
     opacity: 0.5;
   }
 }
+h1 {
+  font-family: "Archivo Black";
+  font-size: 24px;
+}
+
 .header {
   height: 100vh;
 }
@@ -101,14 +165,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+.header__welcome > h1 {
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+.header__welcome > h2 {
+  margin-bottom: 5%;
+  font-size: 18px;
 }
 .header__link {
-  position: absolute;
-  bottom: 50%;
   text-decoration: none;
   font-size: 14px;
-  font-weight: bold;
+  font-family: "Archivo Black";
 }
 .header__link:hover {
   color: #F6cc55;
@@ -123,24 +192,55 @@
 }
 
 .projects {
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+}
+.projects__header {
+  padding: 3%;
 }
 
 .info {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .info__about {
   height: 35vh;
+  text-align: center;
+  padding-top: 5%;
 }
 .info__contact {
   height: 35vh;
+  text-align: center;
 }
 .info__svg {
   height: 30vh;
 }
 
+.info__about > p {
+  font-size: 14px;
+}
+
+.info__contact > p {
+  font-size: 14px;
+}
+
 @media screen and (min-width: 768px) {
   .header__nav__link {
     font-size: 18px;
+  }
+
+  .header__link {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .header__welcome > h2 {
+    font-size: 24px;
   }
 }
