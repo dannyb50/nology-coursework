@@ -5,27 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Danny Baker</title>
-    <link rel="stylesheet" href="main.css"/>
-    <script src="https://kit.fontawesome.com/88eeb26109.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/88eeb26109.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
       <div class="header__stars">
-      <i class="fas fa-star header__star-one"></i>
-      <i class="fas fa-star header__star-two"></i>
-      <i class="fas fa-star header__star-three"></i>
+        <i class="fas fa-star header__star-one"></i>
+        <i class="fas fa-star header__star-two"></i>
+        <i class="fas fa-star header__star-three"></i>
+        <i class="fas fa-star header__shooting-star"></i>
       </div>
+
       <nav class="header__nav">
         <a class="header__nav__link" href="#projects">Projects</a>
         <a class="header__nav__link" href="#about">About</a>
         <a class="header__nav__link" href="#contact">Contact</a>
       </nav>
+
+      
+
       <section class="header__welcome">
         <h1>Hello, I'm Danny</h1>
         <h2>A Junior Web Developer</h2>
-      
         <a class="header__link" href="#projects">View My Work</a>
       </section>
+
       <svg
         class="header__svg"
         width="100%"
@@ -96,54 +104,69 @@
         </defs>
       </svg>
     </header>
+
     <main>
       <section class="projects" id="projects">
         <h1 class="projects__header">My Projects</h1>
         <div class="container">
           <div class="container__link-one">
-            
-            <img id="overlay" src="./images/portfolio-image"/>
+            <img id="overlay" src="./images/portfolio-image" />
             <div class="image-text">
-              <span>
-              <h3>This Site</h3> 
-              <p>Languages & Tools:</p> 
-              <p>HTML, CSS, SASS</p>
-              </span>
-              <a href="https://github.com/dannyb50/nology-coursework/tree/main/personal-portfolio" target="_blank"><i class="fas fa-code project-link"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-star project-link"></i></a>
+              
+                <h3>This Site</h3>
+                <p>Languages & Tools:</p>
+                <p>HTML, CSS, SASS</p>
+              
+              <a
+                href="https://github.com/dannyb50/nology-coursework/tree/main/personal-portfolio"
+                target="_blank"
+                ><i class="fas fa-code project-link"></i
+              ></a>
+              <a href="#" target="_blank"
+                ><i class="fas fa-star project-link"></i
+              ></a>
             </div>
-            
           </div>
+
           <div class="container__link-two"></div>
           <div class="container__link-three"></div>
           <div class="container__link-four"></div>
         </div>
+
         <div class="projects__stars">
           <i class="fas fa-star projects__star-one"></i>
           <i class="fas fa-star projects__star-two"></i>
-          </div>
+        </div>
       </section>
+
       <section class="info">
+
+        <div class="info__stars">
+          <i class="fas fa-star info__star-one"></i>
+          <i class="fas fa-star info__star-two"></i>
+          <i class="fas fa-star info__star-three"></i>
+        </div>
+
         <section class="info__about" id="about">
           <h1>About Danny</h1>
           <p>
             Hello, I’m Danny. I’m a Warrington-based junior software developer.
-          </p>
-          <p>
+            <br><br>
             I am currently studying on a self-paced software developer course
             with _nology. I am loving the journey and working towards my goal of
             landing my first job in tech in 2021.
           </p>
         </section>
+
         <section class="info__contact" id="contact">
           <h1>Get in Touch</h1>
           <p>
             If you’re like-minded and think we can help each other, I’d love to
             hear from you.
           </p>
+          <a href="mailto:dannyrb50@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/dannyb50/" target="_blank"><i class="fab fa-github"></i></a>
         </section>
-
-      
 
         <svg
           class="info__svg"
@@ -213,9 +236,7 @@
               <stop offset="0.598958" stop-color="white" stop-opacity="0" />
             </linearGradient>
           </defs>
-    
         </svg>
-        
       </section>
     </main>
   </body>

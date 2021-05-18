@@ -29,6 +29,16 @@
         animation-name: twinkle;
         animation-duration: 2.1s;
     }
+
+    &__shooting-star {
+        position: absolute;
+        font-size: 4px;
+        left: -100px;
+        animation-name: shooting;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
 }
 
 .projects {
@@ -139,6 +149,70 @@
     color: #b0708a;
 }
 
+.info {
+    &__star-one {
+        position: absolute;
+        font-size: 7px;
+        left: 18px;
+        top: 18px;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 2s;
+    }
+
+    &__star-two {
+        position: absolute;
+        font-size: 6px;
+        left: 10px;
+        top: 36px;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 1.9s;
+    }
+
+    &__star-three {
+        position: absolute;
+        font-size: 12px;
+        left: 21px;
+        top: 46px;
+        animation-iteration-count: infinite;
+        animation-name: twinkle;
+        animation-duration: 2.1s;
+    }
+}
+
+.fa-envelope {
+    font-size: 64px;
+    padding-top: 60px;
+    padding-right: 30px;
+}
+
+.fa-envelope:hover {
+    color: #F6cc55;
+    transition: 0.3s ease-in;
+    transform: rotate(10deg);
+}
+
+.fa-envelope:active {
+    color: #b0708a;
+}
+
+.fa-github {
+    font-size : 64px;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+.fa-github:hover {
+    color: #F6cc55;
+    transition: 0.3s ease-in;
+    transform: rotate(10deg);
+}
+
+.fa-github:active {
+    color: #b0708a;
+}
+
 @media screen and (min-width: 768px) {
     .header__star-one {
         font-size: 16px;
@@ -164,6 +238,24 @@
 
     .projects__star-two {
         font-size: 15px;
+    }
+
+    .info {
+        &__star-one {
+            font-size: 14px;
+            left: 45px;
+            top: 32px;
+        }
+        &__star-two {
+            font-size: 9px;
+            left: 25px;
+            top: 67px;
+        }
+        &__star-three {
+            font-size: 21px;
+            left: 45px;
+            top: 91px;
+        }
     }
 
     .image-text h3 {
@@ -206,11 +298,30 @@
         width: 85%;
         height: auto;
     }
+
+    .fa-envelope {
+        font-size: 96px;
+    }
+
+    .fa-github {
+        font-size: 96px;
+    }
 }
 
 @keyframes twinkle {
     20% {
         transform: scale(0.5);
         opacity: 0.5;
+    }
+}
+
+@keyframes shooting {
+    from {
+        left: -100px;
+        top: 300px;
+    }
+    to {
+        left: calc( 100% + 100px );
+        top: 100px;
     }
 }
