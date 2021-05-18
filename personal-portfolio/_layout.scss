@@ -6,70 +6,36 @@ h1 {
 .header {
     height: 100vh;
 
-    &__nav {
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-
-        &__link {
-            padding-right: 5%;
-            text-decoration: none;
-            font-size: 12px;
-        }
-
-        &__link:hover {
-            color: #F6cc55;
-            transition: 0.3s ease-in;
-        }
-
-        &__link:active {
-            color: #b0708a;
-        }
-    }
-
-    &__welcome {
-        height: 60vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__welcome > h1 {
-        margin-top: 10%;
-        margin-bottom: 2%;
-    }
-
-    &__welcome > h2 {
-        margin-bottom: 5%;
-        font-size: 18px;
-    }
-
-    &__link {
-        text-decoration: none;
-        font-size: 14px;
-        font-family: "Archivo Black";
-        
-    }
-
-    &__link:hover {
-        color: #F6cc55;
-        transition: 0.3s ease-in;
-        transform: rotate(10deg);
-    }
-
-    &__link:active {
-        color: #b0708a;
-    }
-        
-
-
     &__svg {
         height: 30vh;
     }
 
 }
+
+.welcome {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome > h1 {
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+.welcome > h2 {
+        margin-bottom: 5%;
+        font-size: 18px;
+    }
+
+.nav {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    }
 
 .projects {
     min-height: 100vh;
@@ -78,6 +44,42 @@ h1 {
 
     &__header {
         padding: 3%;
+    }
+}
+
+.container {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2%;
+    border-top: 1px solid $color-white;
+    position: relative;
+
+    &__link-one {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border-bottom: 1px solid $color-white;
+        position: relative;
+    }
+
+    &__link-two {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &__link-three {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &__link-four {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        border-bottom: 1px solid $color-white;
     }
 }
 
@@ -122,19 +124,12 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
-    .header__nav__link {
-        font-size: 18px;
-    }
-
-    .header__link {
-        font-size: 18px;
-    }
 
     h1 {
         font-size: 36px;
     }
 
-    .header__welcome > h2 {
+    .welcome > h2 {
         font-size: 24px;
     }
 
@@ -149,6 +144,31 @@ h1 {
 
         &__contact > h1 {
             padding-top: 5%;
+        }
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        height: 80%;
+
+        &__link-one {
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    
+        &__link-two {
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+    
+        &__link-three {
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    
+        &__link-four {
+            grid-row-start: 2;
+            grid-row-end: 3;
         }
     }
 }

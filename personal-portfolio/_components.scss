@@ -41,8 +41,42 @@
     }
 }
 
+.nav {
+    &__link {
+        padding-right: 5%;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    &__link:hover {
+        color: #F6cc55;
+        transition: 0.3s ease-in;
+    }
+
+    &__link:active {
+        color: #b0708a;
+    }
+}
+
+.welcome {
+    &__link {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Archivo Black";   
+    }
+
+    &__link:hover {
+        color: #F6cc55;
+        transition: 0.3s ease-in;
+        transform: rotate(10deg);
+    }
+
+    &__link:active {
+        color: #b0708a;
+    }
+}
+
 .projects {
-    
     &__star-one {
         position: absolute;
         font-size: 14px;
@@ -61,42 +95,6 @@
         animation-iteration-count: infinite;
         animation-name: twinkle;
         animation-duration: 1.9s;
-    }
-}
-
-.container {
-    width: 70%;
-    height: 80%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2%;
-    border-top: 1px solid $color-white;
-    position: relative;
-
-    &__link-one {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        border-bottom: 1px solid $color-white;
-        position: relative;
-    }
-
-    &__link-two {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        border-bottom: 1px solid $color-white;
-    }
-
-    &__link-three {
-        grid-row-start: 3;
-        grid-row-end: 4;
-        border-bottom: 1px solid $color-white;
-    }
-
-    &__link-four {
-        grid-row-start: 4;
-        grid-row-end: 5;
-        border-bottom: 1px solid $color-white;
     }
 }
 
@@ -214,30 +212,46 @@
 }
 
 @media screen and (min-width: 768px) {
-    .header__star-one {
-        font-size: 16px;
-        left: 17px;
-        top: 23px;
+    .header {
+        &__star-one {
+            font-size: 16px;
+            left: 17px;
+            top: 23px;
+        }
+
+        &__star-two {
+            font-size: 13px;
+            left: 54px;
+            top: 35px;
+        }
+
+        &__star-three {
+            font-size: 10px;
+            left: 33px;
+            top: 63px;
+        }
     }
 
-    .header__star-two {
-        font-size: 13px;
-        left: 54px;
-        top: 35px;
+    .nav {
+        &__link {
+            font-size: 18px;
+        }
     }
 
-    .header__star-three {
-        font-size: 10px;
-        left: 33px;
-        top: 63px;
+    .welcome {
+        &__link {
+        font-size: 18px;
+        }
     }
 
-    .projects__star-one {
-        font-size: 21px;
-    }
+    .projects {
+        &__star-one {
+            font-size: 21px;
+        }
 
-    .projects__star-two {
-        font-size: 15px;
+        &__star-two {
+            font-size: 15px;
+        }
     }
 
     .info {
@@ -270,30 +284,7 @@
     .project-link {
         font-size: 36px;;
     } 
-    .container {
-        grid-template-columns: 1fr 1fr;
-        height: 80%;
-
-        &__link-one {
-            grid-row-start: 1;
-            grid-row-end: 2;
-        }
     
-        &__link-two {
-            grid-row-start: 2;
-            grid-row-end: 3;
-        }
-    
-        &__link-three {
-            grid-row-start: 1;
-            grid-row-end: 2;
-        }
-    
-        &__link-four {
-            grid-row-start: 2;
-            grid-row-end: 3;
-        }
-    }
     .container img {
         width: 85%;
         height: auto;

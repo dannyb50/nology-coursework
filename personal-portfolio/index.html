@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header class="header">
       <div class="header__stars">
@@ -20,19 +21,19 @@
         <i class="fas fa-star header__shooting-star"></i>
       </div>
 
-      <nav class="header__nav">
-        <a class="header__nav__link" href="#projects">Projects</a>
-        <a class="header__nav__link" href="#about">About</a>
-        <a class="header__nav__link" href="#contact">Contact</a>
+      <nav class="nav">
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#contact">Contact</a>
       </nav>
 
-      
-
-      <section class="header__welcome">
+      <section class="welcome">
         <h1>Hello, I'm Danny</h1>
         <h2>A Junior Web Developer</h2>
-        <a class="header__link" href="#projects">View My Work</a>
+        <a class="welcome__link" href="#projects">View My Work</a>
       </section>
+
+      <!-- Wave graphic start -->
 
       <svg
         class="header__svg"
@@ -103,20 +104,23 @@
           </linearGradient>
         </defs>
       </svg>
+
+      <!-- wave graphic end -->
+
     </header>
 
     <main>
+
       <section class="projects" id="projects">
         <h1 class="projects__header">My Projects</h1>
         <div class="container">
+
           <div class="container__link-one">
             <img id="overlay" src="./images/portfolio-image" />
             <div class="image-text">
-              
-                <h3>This Site</h3>
-                <p>Languages & Tools:</p>
-                <p>HTML, CSS, SASS</p>
-              
+              <h3>This Site</h3>
+              <p>Languages & Tools:</p>
+              <p>HTML, CSS, SASS</p>
               <a
                 href="https://github.com/dannyb50/nology-coursework/tree/main/personal-portfolio"
                 target="_blank"
@@ -127,6 +131,8 @@
               ></a>
             </div>
           </div>
+
+          <!-- add future projects to below containers -->
 
           <div class="container__link-two"></div>
           <div class="container__link-three"></div>
@@ -140,7 +146,6 @@
       </section>
 
       <section class="info">
-
         <div class="info__stars">
           <i class="fas fa-star info__star-one"></i>
           <i class="fas fa-star info__star-two"></i>
@@ -151,7 +156,7 @@
           <h1>About Danny</h1>
           <p>
             Hello, I’m Danny. I’m a Warrington-based junior software developer.
-            <br><br>
+            <br /><br />
             I am currently studying on a self-paced software developer course
             with _nology. I am loving the journey and working towards my goal of
             landing my first job in tech in 2021.
@@ -164,9 +169,15 @@
             If you’re like-minded and think we can help each other, I’d love to
             hear from you.
           </p>
-          <a href="mailto:dannyrb50@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-          <a href="https://github.com/dannyb50/" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:dannyrb50@gmail.com" target="_blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="https://github.com/dannyb50/" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
         </section>
+
+        <!-- wave graphic start -->
 
         <svg
           class="info__svg"
@@ -237,6 +248,9 @@
             </linearGradient>
           </defs>
         </svg>
+
+        <!-- wave graphic end -->
+
       </section>
     </main>
   </body>
