@@ -103,7 +103,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 85%;
+    height: 80%;
+    width: 85%;
     border: 1px solid $color-white;
 }
 
@@ -114,7 +115,7 @@
 }
 
 .image-text {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -123,6 +124,7 @@
 
 .image-text h3 {
     font-size: 18px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -131,7 +133,7 @@
 }
 
 .project-link {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px;
     font-size: 18px;;
 }
@@ -284,11 +286,6 @@
     .project-link {
         font-size: 36px;;
     } 
-    
-    .container img {
-        max-width: 90%;
-        height: 85%;
-    }
 
     .fa-envelope {
         font-size: 96px;
