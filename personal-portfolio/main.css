@@ -120,7 +120,7 @@
 }
 
 .image-text {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -274,8 +274,8 @@
   }
 
   .container img {
-    width: 85%;
-    height: auto;
+    max-width: 90%;
+    height: 85%;
   }
 
   .fa-envelope {
