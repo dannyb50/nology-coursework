@@ -1,17 +1,24 @@
 * {
   margin: 0;
-  padding: 0;
+  font-size: 100px;
 }
 
 main {
-  height: 100%;
+  height: 100vh;
 }
 
-#buttons {
+.calculator__screen {
+  width: 100%;
+  height: 20%;
+}
+
+.calculator__keys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
-  background-color: blue;
-  color: yellow;
+}
+
+#equals {
+  grid-area: 2/4/6/5;
 }
