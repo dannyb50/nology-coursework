@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins";
+      }
+      * {
+        font-family: "Lato";
+      }
+      .valid {
+        border: 4px solid green;
+      }
+      .invalid {
+        border: 4px solid red;
+      }
+      .input {
+        background-color: lightskyblue;
+      }
+      .error {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .main {
+        width: 100%;
+        height: 100%;
+        border: black solid 2px;
+      }
+
+      .position {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+
+      .form-position {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button-position {
+        margin-top: 50px;
+        width: 100px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Welcome/Title -->
+      <section id="welcome">
+        <h1 id="welcome-title">Welcome to Nology Conference!</h1>
+        <p>Amazing talks from amazing people.</p>
+      </section>
+
+      <!-- Register your interest -->
+      <section id="contact">
+        <h3>Register your interest!</h3>
+        <form id="form">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" onchange="handleInputChange(event)" />
+            <p id="name-error"></p>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" />
+            <p id="email-error"></p>
+          </div>
+          <button id="button" onClick="handleRegister()">Send</button>
+        </form>
+        <h3 id="user-message"></h3>
+      </section>
+
+      <!-- <section id="summary">
+        <h3>Summary</h3>
+        <ul id="list"></ul>
+      </section> -->
+    </main>
+
+    <!-- Script -->
+    <script defer>
+      // 1. Change the welcome innerHTML to 'Welcome to Nology Conference 2021!'
+      let myWelcomeMessage = document.getElementById("welcome-title");
+      myWelcomeMessage.innerHTML = "Welcome to Nology Conference 2021!";
+
+      // 2. Add an 'active' class to first form-input
+      let myInputs = document.getElementsByClassName("form-input");
+      myInputs[0].classList.add("input");
+
+      // 3. Create a handleRegister function to run when the form is submitted, a simple pop please.
+
+      // NOT A HANDLEREGISTER FUNCTION?:
+      let button = document.getElementById("button").addEventListener("click", (event) => {
+        event.preventDefault();
+        document.querySelector("#user-message").innerHTML = "Thank you for registering!";
+      });
+
+        //  const handleRegister = (event) => {
+        //    document.querySelector("#user-message").innerHTML = "Thank you for registering!";
+        //  }
+         
+
+      // 4. Create a handleInputChange function to validate the input
+         // Can you add the class 'valid' if it has a value?​
+         // Can you  add the 'invalid' class if it does not?
+
+         //add error message if invalid
+      let message = "Please enter your ";
+      document.querySelector('#name-error').classList.add("error");
+      document.querySelector('#email-error').classList.add("error");
+
+      myInputs[0].addEventListener("input", (event) => {
+        let inputValue = event.target.value;
+        
+        if (inputValue != undefined && inputValue.length === 0) {
+          event.target.classList.remove("valid")
+          event.target.classList.add("invalid")
+          document.querySelector('#name-error').innerHTML = message + 'name.';  
+        } else {
+          event.target.classList.remove("invalid")
+          event.target.classList.add("valid")
+          document.querySelector('#name-error').innerHTML = "";
+        }
+      });
+
+      //should have used querySelectorAll and for each to add/remove these valid and invalid classes:
+      // formInputs.forEach((formInput) => {
+      //   formInput.addEventListener("input", (event) => {
+      //     let imputValue = event.target.value;
+
+      //     if (inputValue != undefined && inputValue.length > 0) {
+      //       event.target.classList.remove("invalid");
+      //       event.target.classList.add("valid");
+      //     } else {
+      //       event.target.classList.remove("valid");
+      //       event.target.classList.add("invalid");
+      //     }
+      //   });
+      // });
+
+      
+
+      myInputs[1].addEventListener("input", (event) => {
+        let inputValue = event.target.value;
+        
+        if (inputValue != undefined && inputValue.length === 0) {
+          event.target.classList.remove("valid")
+          event.target.classList.add("invalid")
+          document.querySelector('#email-error').innerHTML = message + 'email address.';  
+        } else {
+          event.target.classList.remove("invalid")
+          event.target.classList.add("valid")
+          document.querySelector('#email-error').innerHTML = "";
+        }
+      });
+
+      document.querySelector("main").classList.add("main");
+      document.querySelector("#welcome").classList.add("position");
+      document.querySelector("#contact").classList.add("form-position");
+      document.querySelector("form").classList.add("form-position");
+
+      const form = document.querySelectorAll(".form-group");
+      form.forEach((group) => {
+        group.classList.add("form-position");
+      });
+
+      document.querySelector("#button").classList.add("button-position");
+
+  
+
+     
+         
+
+      
+      
+
+      // EXTENSION Dynamically add a ul/li list beneath the form with the summary points of conference
+      // const summaryPoints = ["intro", "SCSS", "Disco"];
+      // const summaryList = document.getElementById("list");
+
+      // const summaryPointsHTML = summaryPoints.map((summaryPoint) => {
+      //   return `<li>${summaryPoint}</li>`;
+      // });
+
+      // summaryList.innerHTML = summaryPointsHTML.join("");
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .valid {
+            background-color: lightgreen;
+            border: 5px solid green;
+        }
+
+        form {
+            margin: 20px 5px;
+        }
+
+        form * {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- event attribute -->
+    <!-- <h1 onmouseover="alert('Mouse over')">This is my heading</h1>
+
+    <button onclick="alert('I was clicked')">Click me</button>
+
+    <form action="">
+        <input onfocus="alert('I was focused')"type="text" />
+    </form> -->
+
+    <h1 id="heading">Hello</h1>
+    <button id="button">Click me</button>
+    <form action="">
+        <input class="text-input" type="text">
+        <input class="text-input" type="text">
+    </form>
+
+    <form action="" id="name-form">
+        <input type="text" id="name-input">
+        <button>Submit</button>
+    </form>
+
+    <ul id="names-list"></ul>
+    <script>
+        //console.log(document.getElementById("heading"));
+
+        //getting a html reference
+        const heading = document.getElementById("heading");
+        const button = document.getElementById("button");
+
+        //getting miltiple elements
+        const textInputs = document.getElementsByClassName("text-input");
+
+        // console.log(heading);
+        // heading.innerHTML = "Javascript <span>did this</span>";
+
+        // console.log(button);
+        // button.style.backgroundColor = "green";
+        // button.innerHTML = "Clicked :)";
+
+        // //interacting with a html collection
+        // console.log(textInputs[0]);
+        // textInputs[0].value = "The user was here";
+        // textInputs[1].value = "The user was here";
+
+        // //looped through html collection
+        // for (let i=0; i<textInputs.length; i++) {
+        //     textInputs[i].value = "Not any more!";
+        // }
+
+        // event listeners
+
+        // htmlElement.addEventListener("event", () => {
+        //    ... do somthing
+        // })
+
+        heading.addEventListener("mouseover", () => {
+            heading.innerHTML = "Javascript did this";
+        });
+
+        heading.addEventListener("mouseout", () => {
+            heading.innerHTML = "Hello";
+        });
+
+        button.addEventListener("click", () => {
+            button.innerHTML = "Clicked :)";
+            button.style.backgroundColor = "green";
+        });
+
+        textInputs[0].addEventListener("focus", () => {
+            textInputs[0].classList.add("valid");
+        });
+
+        textInputs[1].addEventListener("focus", (event) => {
+            // event.target.classList.add("valid");
+
+        });
+
+        const nameForm = document.getElementById("name-form");
+
+        nameForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const namesList = document.getElementById("names-list");
+            const inputValue = document.getElementById("name-input").value;
+
+            namesList.innerHTML += `<li>${inputValue}</li>`
+        })
+    </script>
+</body>
+</html>
