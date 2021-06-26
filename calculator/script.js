@@ -1,60 +1,52 @@
-const calculator = document.querySelector(".calculator");
-const buttons = document.querySelector(".calculator__keys");
-const display = document.querySelector(".calculator__screen")
+const calculator = {
+    displayValue: '0',
+    firstNumber: null,
+    waitingForSecondNumber: false,
+    operator: null,
+};
 
-buttons.addEventListener("click", (event) => {
-    if (event.target.matches('button')) {
-
-        const key = event.target;
-        const action = key.dataset.action;
-        const buttonValue = key.textContent;
-        let displayValue = display.textContent;
-        const previousKeyType = calculator.dataset.previousKeyType;
-
-        if (action === "add" ||
-            action === "subtract" ||
-            action === "multiply" ||
-            action === "divide" ) {
-            calculator.dataset.previousKeyType = "operator";
-            calculator.dataset.firstValue = displayValue;
-            calculator.dataset.operator = action;
-        }
-        if (action === "decimal") {
-            display.textContent = displayValue + '.';
-        }
-        if (action === "clear") {
-            console.log('clear')
-        }
-        if (action === "calculate") {
-            const firstValue = calculator.dataset.firstValue;
-            const operator = calculator.dataset.operator;
-            const secondValue = displayValue;
-
-            display.textContent = calculate(firstValue, operator, secondValue)
-        }
-        if (!action) {
-            if (displayValue === '0' || previousKeyType === 'operator') {
-                display.textContent = buttonValue
-            } else {
-                display.textContent = displayValue + buttonValue;
-            }
-        }
+function keyPressed(digit) {
+ 
+    if (calculator.displayValue === '0') {
+        calculator.displayValue = digit;
+    } else {
+        calculator.displayValue += digit;
     }
+};
 
+function inputDecimal(point) {
+    if (!calculator.displayValue.includes(point)) {
+        calculator.displayValue += point;
+    }
+};
+
+function updateScreen() {
+const display = document.querySelector(".calculator__screen");
+display.value = calculator.displayValue;
+};
+
+updateScreen();
+
+const keys = document.querySelector(".calculator__keys");
+
+keys.addEventListener("click", (event) => {
+    let buttonClicked = event.target;
+
+    if(buttonClicked.classList.contains("operator")) {
+        keyPressed(buttonClicked.value);
+        updateScreen();
+        return;
+    } if(buttonClicked.classList.contains("decimal")) {
+        //keyPressed(buttonClicked.value); (Was overriding inputDecimal() and allowing more to be inputted)
+        inputDecimal(buttonClicked.value);
+        updateScreen();
+        return;
+    } if(buttonClicked.classList.contains("clear")) {
+        keyPressed(buttonClicked.value);
+        updateScreen();
+        return;
+    } else {
+        keyPressed(buttonClicked.value);
+        updateScreen();
+    }
 });
-
-const calculate = (firstNum, operator, secondNum) => {
-    let result = ''
-    
-    if (operator === 'add') {
-      result = parseFloat(firstNum) + parseFloat(secondNum)
-    } else if (operator === 'subtract') {
-      result = parseFloat(firstNum) - parseFloat(secondNum)
-    } else if (operator === 'multiply') {
-      result = parseFloat(firstNum) * parseFloat(secondNum)
-    } else if (operator === 'divide') {
-      result = parseFloat(firstNum) / parseFloat(secondNum)
-    }
-    
-    return result
-  }
