@@ -1,52 +1,62 @@
-const calculator = {
-    displayValue: '0',
-    firstNumber: null,
-    waitingForSecondNumber: false,
-    operator: null,
-};
-
-function keyPressed(digit) {
- 
-    if (calculator.displayValue === '0') {
-        calculator.displayValue = digit;
-    } else {
-        calculator.displayValue += digit;
-    }
-};
-
-function inputDecimal(point) {
-    if (!calculator.displayValue.includes(point)) {
-        calculator.displayValue += point;
-    }
-};
+let displayValue = '0';
+let firstInput = null;
+let operator = null;
+let secondInput = null;
 
 function updateScreen() {
-const display = document.querySelector(".calculator__screen");
-display.value = calculator.displayValue;
-};
-
-updateScreen();
-
-const keys = document.querySelector(".calculator__keys");
-
-keys.addEventListener("click", (event) => {
-    let buttonClicked = event.target;
-
-    if(buttonClicked.classList.contains("operator")) {
-        keyPressed(buttonClicked.value);
-        updateScreen();
-        return;
-    } if(buttonClicked.classList.contains("decimal")) {
-        //keyPressed(buttonClicked.value); (Was overriding inputDecimal() and allowing more to be inputted)
-        inputDecimal(buttonClicked.value);
-        updateScreen();
-        return;
-    } if(buttonClicked.classList.contains("clear")) {
-        keyPressed(buttonClicked.value);
-        updateScreen();
-        return;
-    } else {
-        keyPressed(buttonClicked.value);
-        updateScreen();
+    let display = document.querySelector(".calculator__screen");
+    display.value = displayValue;
     }
-});
+    
+    updateScreen();
+
+
+function calculation(firstInput, operator, secondInput) {
+    if (operator === "*") {
+        displayValue = firstInput * secondInput;
+    }
+    if (operator === "/") {
+        displayValue = firstInput / secondInput;
+    }
+    if (operator === "+") {
+        displayValue = firstInput + secondInput;
+    }
+    if (operator === "-") {
+        displayValue = firstInput - secondInput
+    }
+    updateScreen();
+}
+
+
+const buttons = document.querySelector(".calculator__keys");
+buttons.addEventListener("click", (event) => {
+
+    if (event.target.classList.contains("operator")) {
+        displayValue = event.target.value;
+        // firstInput = displayValue;
+        // console.log(firstInput);
+    }
+
+    if (event.target.classList.contains("decimal")) {
+        displayValue = event.target.value;
+    }
+
+    if (event.target.classList.contains("clear")) {
+        displayValue = "0";
+        firstInput = null;
+        secondInput = null;
+        operator = null;
+    }
+
+    else {
+        displayValue = event.target.value;
+    }
+
+    updateScreen();
+})
+
+function input() {
+    if (displayValue === "0") {
+        
+    }
+}
