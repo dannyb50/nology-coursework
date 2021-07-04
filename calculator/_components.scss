@@ -1,0 +1,25 @@
+.calculator {
+    height: 80vh;
+    border: solid 2px black;
+    padding: 30px;
+
+
+    &__screen {
+        height: 15%;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: right;
+    }
+    &__keys {
+        height: 85%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .calculator {
+        &__screen {
+            margin-bottom: 10px;
+        }
+    }
+}

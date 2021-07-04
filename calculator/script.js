@@ -110,6 +110,3 @@ buttons.addEventListener("click", (event) => {
     number(event.target.value);
     updateScreen();
 });
-
-
-

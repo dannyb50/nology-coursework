@@ -1,15 +1,23 @@
-.calculator__screen {
-    width: 100%;
-    height: 30%;
-}
+.calculator {
+    
 
-.calculator__keys{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
+
+    &__keys {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }   
 }
 
 #equals {
     grid-area: 2/4/6/5;
+}
+
+@media screen and (min-width: 768px) {
+    .calculator {
+        &__keys {
+            gap: 10px;
+        }
+    }
 }
