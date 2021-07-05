@@ -1,65 +1,65 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 50px;
+  font-size: 30px;
 }
 
-main {
-  width: 480px;
+.calculator__screen {
+  font-size: 60px;
 }
 
 @media screen and (min-width: 768px) {
   * {
-    font-size: 65px;
+    font-size: 40px;
   }
 
-  main {
-    width: 800px;
-  }
-
-  .calculator {
-    height: 100vh;
+  .calculator__screen {
+    font-size: 70px;
   }
 }
 @media screen and (min-width: 991px) {
   * {
-    font-size: 70px;
+    font-size: 50px;
   }
 
-  main {
-    width: 1000px;
+  .calculator__screen {
+    font-size: 80px;
   }
 }
 .calculator {
-  height: 80vh;
   border: solid 2px black;
-  padding: 30px;
+  border-radius: 5px;
 }
 .calculator__screen {
-  height: 15%;
-  width: 100%;
-  margin-bottom: 5px;
+  border: none;
   text-align: right;
 }
 .calculator__keys {
-  height: 85%;
-  width: 100%;
+  border-top: solid 2px black;
 }
 
-@media screen and (min-width: 768px) {
-  .calculator__screen {
-    margin-bottom: 10px;
-  }
+button {
+  border: solid 1px black;
+  border-radius: 3px;
 }
+
 .calculator {
-  display: block;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+.calculator__screen {
+  width: 100%;
+  height: 80px;
 }
 .calculator__keys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 5px;
+  padding: 5px;
 }
 
 #equals {
@@ -67,7 +67,18 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .calculator__keys {
-    gap: 10px;
+  .calculator {
+    width: 500px;
+  }
+  .calculator__screen {
+    height: 90px;
+  }
+}
+@media screen and (min-width: 991px) {
+  .calculator {
+    width: 600px;
+  }
+  .calculator__screen {
+    height: 100px;
   }
 }
