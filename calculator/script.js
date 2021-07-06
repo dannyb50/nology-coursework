@@ -32,10 +32,10 @@ function handleOperator(operatorPressed) {
     // WHEN AN OPERATOR IS PRESSED MAKE THE DISPLAY VALUE THE FIRST NUMBER FOR THE SUM
     if (firstInput === null && !isNaN(inputValue)) {
         firstInput = inputValue;
-    // IF AN OPERATOR IS ASSIGNED, CALL AND STORE CALCULATION TO RESULT
+    // IF AN OPERATOR IS ASSIGNED, CALL AND STORE CALCULATION TO RESULT VARIABLE WHEN ANY OPERATOR IS PRESSED INC EQUALS
     } else if (operator) {
         const result = calculation(firstInput, inputValue, operator);
-        // DISPLAY THE RESULT
+        // DISPLAY THE RESULT WHEN AN OPERATOR IS PRESSES
         displayValue = result;
         // SET RESULT TO FIRST INPUT SO IT CAN BE USED IN NEXT CALCULATION
         firstInput = result;
@@ -50,21 +50,22 @@ function handleOperator(operatorPressed) {
     console.log(secondInput);
 }
 
-//PERFORM THE CALCULATIONS
-function calculation(firstInput, secondInput, operator) {
+// PERFORM THE CALCULATIONS
+function calculation(firstInput, inputValue, operator) {
     if (operator === "*") {
-        return firstInput * secondInput;
+        return firstInput * inputValue;
     }
     if (operator === "/") {
-        return firstInput / secondInput;
+        return firstInput / inputValue;
     }
     if (operator === "+") {
-        return firstInput + secondInput;
+        return firstInput + inputValue;
     }
     if (operator === "-") {
-        return firstInput - secondInput
+        return firstInput - inputValue
     }
-    return secondInput;
+    // IF OPERATOR IS = DO NOTHING
+    return inputValue;
 }
 
 function updateScreen() {
@@ -75,15 +76,17 @@ updateScreen();
 
 const buttons = document.querySelector(".calculator__keys");
 buttons.addEventListener("click", (event) => {
-    //STOP DISPLAYING UNDEFINED WHEN I CLICK THE CALCULATOR ITSELF
+    // STOP DISPLAYING UNDEFINED WHEN I CLICK THE CALCULATOR ITSELF
     if (!event.target.matches("button")) {
         return;
     }
+    // ASSIGN HANDLEOPERATOR TO OPERATOR BUTTONS
     if (event.target.classList.contains("operator")) {
         handleOperator(event.target.value);
         updateScreen();
         return;
     }
+    // ASSIGN DECIMAL FUNCTION TO DECIMAL BUTTON
     if (event.target.classList.contains("decimal")) {
         decimal(event.target.value);
         updateScreen();
