@@ -4,10 +4,6 @@ let firstInput = null;
 let operator = null;
 // CHECK IF THE FIRST NUMBER AND OPERATOR ARE STORED TO DETERMINE IF WE ARE READY FOR THE SECOND NUMBER
 let secondInput = false;
-// console.log(displayValue);
-// console.log(firstInput);
-// console.log(operator);
-// console.log(secondInput);
 
 // FUNCTION TO DETERMINE WHAT IS DISPLAYED ON SCREEN
 function number(digit) {
@@ -30,23 +26,22 @@ function decimal(dot) {
     }
 }
 
-
 function handleOperator(operatorPressed) {
-    //CHANGE STRING TO NUMBER
+    // CHANGE STRING TO NUMBER
     const inputValue = parseFloat(displayValue);
-    //WHEN AN OPERATOR IS PRESSED MAKE THE DISPLAY VALUE THE FIRST NUMBER FOR THE SUM
+    // WHEN AN OPERATOR IS PRESSED MAKE THE DISPLAY VALUE THE FIRST NUMBER FOR THE SUM
     if (firstInput === null && !isNaN(inputValue)) {
         firstInput = inputValue;
-    //IF AN OPERATOR IS ASSIGNED, CALL AND STORE CALCULATION TO RESULT
+    // IF AN OPERATOR IS ASSIGNED, CALL AND STORE CALCULATION TO RESULT
     } else if (operator) {
         const result = calculation(firstInput, inputValue, operator);
-
+        // DISPLAY THE RESULT
         displayValue = result;
-        //SET RESULT TO FIRST INPUT SO IT CAN BE USED IN NEXT CALCULATION
+        // SET RESULT TO FIRST INPUT SO IT CAN BE USED IN NEXT CALCULATION
         firstInput = result;
     }
-
     secondInput = true;
+    // SET OPERATOR PROPERTY TO OPERATOR WHICH WAS CLICKED
     operator = operatorPressed;
 
     console.log(displayValue);
@@ -72,14 +67,11 @@ function calculation(firstInput, secondInput, operator) {
     return secondInput;
 }
 
-
 function updateScreen() {
     let display = document.querySelector(".calculator__screen");
     display.value = displayValue;
-    }
-    
+    }   
 updateScreen();
-
 
 const buttons = document.querySelector(".calculator__keys");
 buttons.addEventListener("click", (event) => {
@@ -87,20 +79,17 @@ buttons.addEventListener("click", (event) => {
     if (!event.target.matches("button")) {
         return;
     }
-
     if (event.target.classList.contains("operator")) {
         handleOperator(event.target.value);
         updateScreen();
         return;
     }
-
     if (event.target.classList.contains("decimal")) {
         decimal(event.target.value);
         updateScreen();
         return;
     }
-
-    //RESET THE STORED VARIABLES WHEN AC IS CLICKED
+    // RESET THE STORED VARIABLES WHEN AC IS CLICKED
     if (event.target.classList.contains("clear")) {
         displayValue = "0";
         firstInput = null;
@@ -114,7 +103,6 @@ buttons.addEventListener("click", (event) => {
         updateScreen();
         return;
     }
-
     number(event.target.value);
     updateScreen();
 });
