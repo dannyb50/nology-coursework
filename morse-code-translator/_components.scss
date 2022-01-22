@@ -1,0 +1,26 @@
+.button {
+    width: 10%;
+    margin: 0 auto;
+    font-family: 'prompt', sans-serif;
+    font-size: 20px;
+    color: #292841;
+    background-color: #ffe75c;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+#morse {
+    margin-top: 50px;
+}
+
+#clear {
+    margin-top: 15px;
+}
+
+.pink {
+    color: #eb459f;
+}

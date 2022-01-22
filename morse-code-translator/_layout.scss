@@ -1,0 +1,20 @@
+.translator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.input {
+    text-align: center;
+    font-family: 'prompt', sans-serif;
+    font-size: 40px;
+    color: #231f20;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 100px;
+}
